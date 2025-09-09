@@ -24,7 +24,7 @@ Merge (A, l, mid, h)
 
     i = 0  // pointer for left
     j = 0  // pointer for right
-    k = 0- // pointer for original array - A
+    k = 0  // pointer for original array - A
 
     while i < length(left) && j < length(right):
         if left[i] <= right[j]:  // if left side elem smaller than right side
