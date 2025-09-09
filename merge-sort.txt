@@ -1,0 +1,53 @@
+// pseudocode for Merge Sort Algorithm
+
+MergeSort (A, l, h)
+{
+    if l < h:             // if array has more than 1 element - continue
+
+    mid = (l + h) / 2     // get the mid point of array to divide
+
+    MergeSort (A, l, mid)        // left side
+    MergeSort (A, mid + 1, h)    // right side
+    MergeSort (A, l, mid, h)     // Merge both halves
+
+}
+
+
+// Helper function
+
+Merge (A, l, mid, h)
+{
+    // copy the halves into seperate arrays
+
+    left = A[l..mid]
+    right = A[mid + 1..h]
+
+    i = 0  // pointer for left
+    j = 0  // pointer for right
+    k = 0- // pointer for original array - A
+
+    while i < length(left) && j < length(right):
+        if left[i] <= right[j]:  // if left side elem smaller than right side
+            A[k] = left[i]       // copy that to the original
+            i = i + 1            // increment i
+
+        else:
+            A[k] = right[j]      // copy right side elem to A 
+            j = j + 1
+    
+        k = k + 1
+
+    // if there are any elems remaining from either side, left / right
+    // copy them to the array - A 
+
+    while i < length(left):   // left side remains
+        A[k] = left[i]
+        i = i + 1
+        k = k + 1
+
+    while j < length(right):  // right side remains
+        A[k] = right[j]
+        j = j + 1
+        k = k + 1
+
+}
