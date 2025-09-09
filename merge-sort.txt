@@ -9,7 +9,6 @@ MergeSort (A, l, h)
     MergeSort (A, l, mid)        // left side
     MergeSort (A, mid + 1, h)    // right side
     MergeSort (A, l, mid, h)     // Merge both halves
-
 }
 
 
@@ -49,5 +48,4 @@ Merge (A, l, mid, h)
         A[k] = right[j]
         j = j + 1
         k = k + 1
-
 }
